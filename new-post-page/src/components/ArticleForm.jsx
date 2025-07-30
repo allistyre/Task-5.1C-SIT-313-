@@ -2,6 +2,7 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import {TextField} from "@mui/material";
 import Box from "@mui/material/Box";
+import SendIcon from '@mui/icons-material/Send';
 import * as React from "react";
 import Button from "@mui/material/Button";
 
@@ -31,7 +32,7 @@ function ArticleForm() {
                            fullWidth/>
             </Stack>
             <Stack direction="row" spacing={2} mb={5}>
-                <Button variant="contained" color="primary">POST</Button>
+                <Button variant="contained" color="primary" endIcon={<SendIcon />}>POST</Button>
             </Stack>
         </Box>
     )

@@ -2,8 +2,10 @@ import Box from "@mui/material/Box";
 import Typography from '@mui/material/Typography'
 import Stack from '@mui/material/Stack'
 import Button from "@mui/material/Button";
+import SendIcon from '@mui/icons-material/Send';
 import {TextField, ToggleButton} from "@mui/material";
 import * as React from "react";
+import { useState } from "react";
 
 
 function QuestionForm() {
@@ -28,7 +30,7 @@ function QuestionForm() {
                            fullWidth/>
             </Stack>
             <Stack direction="row" spacing={2} mb={5}>
-                <Button variant="contained" color="primary">POST</Button>
+                <Button variant="contained" color="primary" endIcon={<SendIcon />}>POST</Button>
             </Stack>
         </Box>
     )
