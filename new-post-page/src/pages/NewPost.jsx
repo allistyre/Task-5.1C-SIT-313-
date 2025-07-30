@@ -5,6 +5,9 @@ import Typography from '@mui/material/Typography'
 import Stack from '@mui/material/Stack'
 import {ToggleButtonGroup, ToggleButton} from "@mui/material";
 import { useState } from "react";
+import QuestionForm from "../components/QuestionForm";
+import ArticleForm from "../components/ArticleForm";
+
 
 
 function NewPost() {
@@ -26,6 +29,7 @@ function NewPost() {
                     <ToggleButton value={"question"}>Question</ToggleButton>
                     <ToggleButton value={"article"}>Article</ToggleButton>
                 </ToggleButtonGroup>
+                {postType === "question" ? <QuestionForm /> : <ArticleForm /> }
             </Stack>
 
         </Box>
