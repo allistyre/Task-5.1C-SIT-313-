@@ -16,10 +16,10 @@ function NewPost() {
 
     return (
         <Box component='section' sx={{ padding: 4, }}>
-            <Typography component='h1' variant='h4' gutterBottom>
-                New Post
+            <Typography component='h1' variant='h4' gutterBottom fontWeight={500}>
+                Create a New Post
             </Typography>
-            <Stack direction="row" spacing={2} alignItems="center">
+            <Stack direction="row" spacing={2} alignItems="center" mb={5}>
                 <Typography component='h6' variant='h6'>
                     Select Post Type
                 </Typography>
@@ -29,8 +29,9 @@ function NewPost() {
                     <ToggleButton value={"question"}>Question</ToggleButton>
                     <ToggleButton value={"article"}>Article</ToggleButton>
                 </ToggleButtonGroup>
-                {postType === "question" ? <QuestionForm /> : <ArticleForm /> }
             </Stack>
+
+            {postType === "question" ? <QuestionForm /> : <ArticleForm /> }
 
         </Box>
     )
